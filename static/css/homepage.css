@@ -1,0 +1,275 @@
+body {
+  background-color: #e0e0e0;
+}
+
+.Clogo {
+  position: fixed;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 28px;
+  font-weight: 700;
+  color: #002850;
+  letter-spacing: 3px;
+  animation: cardLoading 1s ease-in forwards;
+}
+
+.card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 15px 25px -4px rgba(0, 0, 0, 0.5), inset 0 -3px 4px -1px rgba(0, 0, 0, 0.2), inset 0 3px 4px -1px rgba(255, 255, 255, 0.2), inset 0 0 5px 1px rgba(255, 255, 255, 0.8), inset 0 20px 30px 0 rgba(255, 255, 255, 0.2);
+  transition: all 1s ease-in-out;
+  animation: cardLoading 1s ease-in forwards;
+  background-color: #e0e0e0;
+}
+
+.halo {
+  opacity: 0;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 300px;
+  width: 300px;
+  animation: haloInitial 1.5s ease-in forwards;
+}
+
+.halo span {
+  position: absolute;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  background-color: #7f49d5;
+  background-image: linear-gradient(#9151dd, #535ce9, #4ff1d6);
+}
+
+.halo span:nth-of-type(1) {
+  filter: blur(5px);
+}
+
+.halo span:nth-of-type(2) {
+  filter: blur(10px);
+}
+
+.halo span:nth-of-type(3) {
+  filter: blur(20px);
+}
+
+.halo span:nth-of-type(4) {
+  filter: blur(40px);
+}
+
+.background {
+  position: absolute;
+  inset: 0;
+}
+
+.logo {
+  position: fixed;
+  right: -150%;
+  bottom: 15%;
+  transform: scale(0.25);
+  transition: all 1s ease-in-out;
+}
+
+.icon {
+  display: inline-block;
+  position: relative;
+  top: 10%;
+  left: -10%;
+  width: 40px;
+  height: 40px;
+}
+
+.icon .img {
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+}
+
+.box {
+  position: absolute;
+  padding: 20px;
+  text-align: right;
+  background: rgba(255, 255, 255, 0.2);
+  border-top: 2px solid rgb(255, 255, 255);
+  border-right: 1px solid white;
+  border-radius: 50%;
+  box-shadow: rgba(100, 100, 111, 0.364) -7px 7px 29px 0px;
+  transform-origin: bottom left;
+  transition: all 1s ease-in-out;
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.box1 {
+  width: 70%;
+  height: 70%;
+  bottom: -70%;
+  left: -70%;
+}
+
+.box1 .describe {
+  opacity: 0;
+  position: fixed;
+  right: 25%;
+  bottom: 87%;
+  transform: translate(50%, 50%);
+  transition: all 0.5s ease-in-out;
+  font-size: 1.3em;
+  font-weight: 600;
+  color: #002850;
+  letter-spacing: 3px;
+}
+
+.box1::before {
+  background-color: #acb0da;
+}
+
+.box1:hover::before {
+  opacity: 1;
+}
+
+.box1:hover .describe {
+  opacity: 1;
+}
+
+.box1:hover .icon .img {
+  filter: drop-shadow(0 0 5px white);
+}
+
+.box2 {
+  width: 50%;
+  height: 50%;
+  bottom: -50%;
+  left: -50%;
+  transition-delay: 0.2s;
+}
+
+.box2 .describe {
+  opacity: 0;
+  position: fixed;
+  right: 25%;
+  bottom: 87%;
+  transform: translate(50%, 50%);
+  transition: all 0.5s ease-in-out;
+  font-size: 1.3em;
+  font-weight: 600;
+  color: #002850;
+  letter-spacing: 3px;
+}
+
+.box2::before {
+  background-color: #acb0da;
+}
+
+.box2:hover::before {
+  opacity: 1;
+}
+
+.box2:hover .describe {
+  opacity: 1;
+}
+
+.box2:hover .icon .img {
+  filter: drop-shadow(0 0 5px white);
+}
+
+.box3 {
+  width: 30%;
+  height: 30%;
+  bottom: -30%;
+  left: -30%;
+  transition-delay: 0.4s;
+}
+
+.box3 .describe {
+  opacity: 0;
+  position: fixed;
+  right: 25%;
+  bottom: 87%;
+  transform: translate(50%, 50%);
+  transition: all 0.5s ease-in-out;
+  font-size: 1.3em;
+  font-weight: 600;
+  color: #002850;
+  letter-spacing: 3px;
+}
+
+.box3::before {
+  background-color: #acb0da;
+}
+
+.box3:hover .describe {
+  opacity: 1;
+}
+
+.box3:hover::before {
+  opacity: 1;
+}
+
+.box3:hover .icon .img {
+  filter: drop-shadow(0 0 5px white);
+}
+
+.box4 {
+  width: 10%;
+  height: 10%;
+  bottom: -10%;
+  left: -10%;
+  transition-delay: 0.6s;
+}
+
+.card:hover {
+  width: 330px;
+  height: 330px;
+}
+
+.card:hover .box {
+  bottom: 0px;
+  left: 0px;
+}
+
+.card:hover .logo {
+  position: fixed;
+  right: -150%;
+  bottom: 55%;
+  transform: scale(0.15);
+  opacity: 0;
+}
+
+@keyframes cardLoading {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes haloInitial {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

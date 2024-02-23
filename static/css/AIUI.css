@@ -1,0 +1,347 @@
+body {
+  background-color: #e0e0e0;
+}
+
+.AIUI {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.toggle {
+  display: inline-block;
+  position: relative;
+  height: 100px;
+  width: 100px;
+}
+
+.toggle .talk {
+  opacity: 0;
+  font-weight: 700;
+  font-size: 28px;
+  color: #002850;
+  position: fixed;
+  top: 460%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  height: 50px;
+  width: 200px;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+.toggle .hear {
+  opacity: 0;
+  font-weight: 700;
+  font-size: 28px;
+  color: #002850;
+  position: fixed;
+  top: 460%;
+  left: 112%;
+  transform: translate(-50%, -50%);
+  height: 50px;
+  width: 400px;
+}
+
+.toggle .upload {
+  opacity: 0;
+  font-weight: 700;
+  font-size: 28px;
+  color: #002850;
+  position: fixed;
+  top: 460%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  height: 50px;
+  width: 200px;
+}
+
+.toggle .halo {
+  opacity: 0;
+  position: fixed;
+  top: 345%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 125px;
+  width: 125px;
+  animation: rotate 2s linear infinite, haloInitial 1.5s ease-in forwards;
+}
+
+.toggle .halo span {
+  position: absolute;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  background-color: #7f49d5;
+  background-image: linear-gradient(#9151dd, #535ce9, #4ff1d6);
+}
+
+.toggle .halo span:nth-of-type(1) {
+  filter: blur(5px);
+}
+
+.toggle .halo span:nth-of-type(2) {
+  filter: blur(10px);
+}
+
+.toggle .halo span:nth-of-type(3) {
+  filter: blur(20px);
+}
+
+.toggle .halo span:nth-of-type(4) {
+  filter: blur(40px);
+}
+
+.toggle .halo::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  background-color: #e0e0e0;
+  border: solid 0px #e0e0e0;
+  border-radius: 50%;
+}
+
+.toggle .button {
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  box-shadow: 0 15px 25px -4px rgba(0, 0, 0, 0.5), inset 0 -3px 4px -1px rgba(0, 0, 0, 0.2), inset 0 3px 4px -1px rgba(255, 255, 255, 0.2), inset 0 0 5px 1px rgba(255, 255, 255, 0.8), inset 0 20px 30px 0 rgba(255, 255, 255, 0.2);
+  border-radius: 120px;
+  position: absolute;
+  background: #e0e0e0;
+  margin-left: -60px;
+  margin-top: -60px;
+  display: block;
+  height: 120px;
+  width: 120px;
+  left: 50%;
+  top: 360%;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+.toggle .listenIcon {
+  position: fixed;
+  top: 100%;
+  left: -206%;
+  display: inline-block;
+  transform: scale(0.1);
+  animation: fadeIn 1s ease-in forwards;
+}
+
+.toggle .cancelIcon {
+  opacity: 0;
+  position: fixed;
+  top: 129%;
+  left: -206%;
+  display: inline-block;
+  transform: scale(0.05);
+}
+
+.toggle .logoHome {
+  opacity: 0;
+  position: fixed;
+  top: -50%;
+  left: -555%;
+  display: inline-block;
+  transform: scale(0.4);
+  animation: fadeIn 1s ease-in forwards;
+}
+
+.toggle .logo {
+  opacity: 0;
+  position: fixed;
+  top: -50%;
+  left: -555%;
+  display: inline-block;
+  transform: scale(0.4);
+  /* animation: fadeIn 1s ease-in forwards; */
+}
+
+.toggle input {
+  opacity: 0;
+  position: absolute;
+  cursor: pointer;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  margin-top: 310px;
+}
+
+.toggle input:active~.button {
+  filter: blur(0.5px);
+  box-shadow: 0 12px 25px -4px rgba(0, 0, 0, 0.4), inset 0 -8px 30px 1px rgba(255, 255, 255, 0.9), inset 0 8px 25px 0 rgba(0, 0, 0, 0.4), inset 0 0 10px 1px rgba(255, 255, 255, 0.6);
+}
+
+.toggle input:checked~.button {
+  animation: buttonReshape 1s ease-in forwards;
+}
+
+.toggle input:active~.listenIcon {
+  filter: invert(50%);
+}
+
+.toggle input:checked~.listenIcon {
+  animation: fadeOut 0.5s ease-in forwards;
+}
+
+.toggle input:checked~.cancelIcon {
+  animation: fadeIn 1.5s ease-in forwards;
+}
+
+.toggle input:active~.logoHome {
+  animation: fadeOut 0.3s ease-in forwards;
+}
+
+.toggle input:checked~.logoHome {
+  animation: fadeOut 0s ease-in forwards;
+}
+
+.toggle input:checked~.logo {
+  animation: fadeIn 1s ease-in forwards;
+}
+
+.toggle input:active~.halo {
+  animation: rotate 2s linear infinite, flicker 1s linear infinite;
+}
+
+.toggle input:checked~.halo {
+  animation: rotate 8s linear infinite, fadeIn 1s ease-in forwards, scaleUp 1s ease-in forwards;
+}
+
+.toggle input:checked~.halo span {
+  animation: reshape 1s ease-in forwards;
+}
+
+.toggle input:active~.talk {
+  animation: fadeOut 0s ease-in forwards;
+}
+
+.toggle input:checked~.talk {
+  animation: fadeOut 0s ease-in forwards;
+}
+
+.toggle input:active~.hear {
+  animation: fadeIn 0.5s ease-in forwards;
+}
+
+.toggle input:checked~.hear {
+  animation: fadeOut 0s ease-in forwards;
+}
+
+.toggle input:checked~.upload {
+  animation: fadeIn 0.5s ease-in forwards;
+}
+
+@keyframes haloInitial {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.3;
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+    width: 120px;
+    height: 120px;
+    top: 345%;
+  }
+
+  50% {
+    width: 500px;
+    height: 500px;
+  }
+
+  100% {
+    width: 450px;
+    height: 450px;
+    top: 50%;
+  }
+}
+
+@keyframes reshape {
+  0% {
+    border-radius: 50%;
+  }
+
+  100% {
+    border-radius: 30%;
+  }
+}
+
+@keyframes buttonReshape {
+  0% {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    top: 360%;
+    opacity: 1;
+    margin-left: -60px;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    width: 60px;
+    height: 60px;
+    border-radius: 30%;
+    top: 420%;
+    opacity: 1;
+    margin-left: -30px;
+  }
+}

@@ -1,0 +1,261 @@
+body {
+  background-color: #e0e0e0;
+}
+
+.shape {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 140px;
+  height: 140px;
+  background: linear-gradient(-45deg, #9151dd, #535ce9, #4ff1d6);
+  border-radius: 30%;
+  animation: fadeIn 1s ease-in forwards, spin 3s linear infinite;
+}
+
+.shape::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-45deg, #9151dd, #535ce9, #4ff1d6);
+  transform: translate3d(0, 0, 0) scale(0.95);
+  filter: blur(20px);
+}
+
+.wave-menu {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1000px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  transition: ease 0.2s;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+.wave-menu li {
+  list-style: none;
+  height: 45px;
+  width: 5px;
+  border-radius: 15px;
+  margin: 0 20px;
+  padding: 0;
+  animation-name: wave1;
+  animation-duration: 0.3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transition: ease 0.2s;
+}
+
+.wave-menu li:nth-child(1) {
+  background: linear-gradient(#535ce9, #9151dd);
+}
+
+.wave-menu li:nth-child(2) {
+  background: linear-gradient(#535ce9, #9151dd);
+  animation-name: wave2;
+  animation-delay: 0.2s;
+}
+
+.wave-menu li:nth-child(3) {
+  background: linear-gradient(#535ce9, #9151dd);
+  animation-name: wave3;
+  animation-delay: 0.23s;
+  animation-duration: 0.4s;
+}
+
+.wave-menu li:nth-child(4) {
+  background: linear-gradient(#535ce9, #9151dd);
+  animation-name: wave4;
+  animation-delay: 0.1s;
+  animation-duration: 0.3s;
+}
+
+.wave-menu li:nth-child(5) {
+  background: linear-gradient(#535ce9, #9151dd);
+  animation-delay: 0.5s;
+}
+
+.wave-menu li:nth-child(6) {
+  background: linear-gradient(#535ce9, #9151dd);
+  animation-name: wave2;
+  animation-duration: 0.5s;
+}
+
+.wave-menu li:nth-child(11) {
+  background: linear-gradient(#535ce9, #9151dd);
+  animation-name: wave2;
+  animation-delay: 0.5s;
+  animation-duration: 0.3s;
+}
+
+.wave-menu li:nth-child(12) {
+  background: linear-gradient(#535ce9, #9151dd);
+}
+
+.wave-menu li:nth-child(13) {
+  background: linear-gradient(#535ce9, #9151dd);
+  animation-name: wave3;
+  animation-delay: 0.15s;
+}
+
+.wave-menu li:nth-child(14) {
+  background: linear-gradient(#535ce9, #9151dd);
+  animation-name: wave4;
+  animation-delay: 0.3s;
+}
+
+.wave-menu li:nth-child(15) {
+  background: linear-gradient(#535ce9, #9151dd);
+  animation-name: wave2;
+  animation-delay: 0.5s;
+  animation-duration: 0.3s;
+}
+
+.wave-menu li:nth-child(16) {
+  background: linear-gradient(#535ce9, #9151dd);
+}
+
+.logo {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.13);
+  display: inline-block;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.3;
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+    width: 120px;
+    height: 120px;
+    top: 345%;
+  }
+
+  50% {
+    width: 500px;
+    height: 500px;
+  }
+
+  100% {
+    width: 450px;
+    height: 450px;
+    top: 50%;
+  }
+}
+
+@keyframes reshape {
+  0% {
+    border-radius: 50%;
+  }
+
+  100% {
+    border-radius: 30%;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  50% {
+    border-radius: 50%;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+    border-radius: 30%;
+  }
+}
+
+@keyframes wave1 {
+  from {
+    transform: scaleY(1);
+  }
+
+  to {
+    transform: scaleY(0.5);
+  }
+}
+
+@keyframes wave2 {
+  from {
+    transform: scaleY(0.3);
+  }
+
+  to {
+    transform: scaleY(0.6);
+  }
+}
+
+@keyframes wave3 {
+  from {
+    transform: scaleY(0.6);
+  }
+
+  to {
+    transform: scaleY(0.8);
+  }
+}
+
+@keyframes wave4 {
+  from {
+    transform: scaleY(0.2);
+  }
+
+  to {
+    transform: scaleY(0.5);
+  }
+}

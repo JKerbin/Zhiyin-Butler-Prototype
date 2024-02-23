@@ -1,0 +1,7 @@
+{
+    "default_system_prompt" : "你是一个运行在一台Windows PC上的善于解决计算机问题的智能助手。",
+    "intention_recognition" : "以下这句话是一个计算机使用者的请求，请从以下几个选项中选出该用户的意图: <user_input>。可能的选项有: <task_list>。请输出该选项的编号，除了数字之外不要包含任何文字。",
+    "chat_intention"    :   "用户并不想操作电脑，仅仅是在聊天",
+    "positive_intention"  : "用户赞同",
+    "negative_intention"  : "用户不赞同"
+}

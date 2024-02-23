@@ -1,0 +1,23 @@
+[
+    {
+        "task_name" : "open_file",
+        "task_description" : "打开一个文件",
+        "excutable_file" : "OpenFile.bat",
+        "require_extra_params" : true,
+        "template" : "给定如下TypeScript约束代码type file_path = {params1 : string}。从以下文本中推断用户要打开的文件名：<user_input>。请以纯json格式生成答案，要求输出内容符合file_path的类型定义，params1字段是一个合法的Windows目录路径，不要回复其他文本，不含回车。" 
+    },
+    {
+        "task_name" : "adjust_volume",
+        "task_description" : "调整计算机的音量",
+        "excutable_file" : "AdjustVolume.bat",
+        "require_extra_params" : true,
+        "template" : "从以下文本中提取用户要调整的音量大小：<user_input>。回答内容的TypeScript约束代码如下：type sound = {params1 : number}。请以纯json格式生成答案，不要回复其他文本，不含回车。" 
+    },
+    {
+        "task_name" : "shutdown",
+        "task_description" : "关闭计算机",
+        "excutable_file" : "ShutDown.bat",
+        "require_extra_params" : false,
+        "template" : ""
+    }
+]

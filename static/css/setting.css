@@ -1,0 +1,165 @@
+input {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: 700;
+  font-size: 0.95em;
+  color: #002850;
+  background-color: #efefef;
+  border: 1px;
+  box-shadow: inset 2px 2px 6px #bebebe, inset -2px -2px 6px #ffffff;
+  border-radius: 5px;
+  height: 40px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.deleteBtn {
+  text-align: center;
+  font-weight: 700;
+  color: #002850;
+  border: 1px;
+  margin-left: 5px;
+  margin-top: 16px;
+  box-shadow: 2px 2px 6px #bebebe, -2px -2px 6px #ffffff;
+  border-radius: 30%;
+  height: 35px;
+  width: 35px;
+  background-color: #efefef;
+}
+
+.deleteBtn:active {
+  box-shadow: inset 2px 2px 6px #bebebe, inset -2px -2px 6px #ffffff;
+}
+
+body {
+  background-color: #e0e0e0;
+}
+
+.card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 600px;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 15px 25px -4px rgba(0, 0, 0, 0.5), inset 0 -3px 4px -1px rgba(0, 0, 0, 0.2), inset 0 3px 4px -1px rgba(255, 255, 255, 0.2), inset 0 0 5px 1px rgba(255, 255, 255, 0.8), inset 0 20px 30px 0 rgba(255, 255, 255, 0.2);
+  animation: cardLoading 1s ease-in forwards;
+  background-color: #e0e0e0;
+}
+
+.settingBox {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 600px;
+  width: 400px;
+  border-radius: 30px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  /* box-shadow: inset 0 15px 30px 0 rgba(0, 0, 0, 0.25); */
+  animation: fadeIn 1s ease-in forwards;
+}
+
+.settingHeader {
+  color: #002850;
+  padding: 20px 32px;
+  border-bottom: 2px solid #bbbbbb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.settingTitle {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1;
+  font-weight: 700;
+  font-size: 1.3em;
+}
+
+.settingBody {
+  height: 500px;
+  padding: 24px 32px 51px;
+  overflow-y: auto;
+}
+
+.settingFooter {
+  padding: 20px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-top: 2px solid #bbbbbb;
+  gap: 12px;
+  position: relative;
+}
+
+.button {
+  border: 1px;
+  box-shadow: 2px 2px 6px #bebebe, -2px -2px 6px #ffffff, inset 0 -3px 4px -1px rgba(0, 0, 0, 0.2), inset 0 3px 4px -1px rgba(255, 255, 255, 0.2), inset 0 0 5px 1px rgba(255, 255, 255, 0.8), inset 0 20px 30px 0 rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  color: #002850;
+  font-size: xx-large;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.15s ease;
+  width: 60px;
+  height: 60px;
+}
+
+.button.confirm {
+  font-size: x-large;
+}
+
+.button.home {
+  width: 62px;
+  height: 62px;
+  font-size: 1.4em;
+  position: fixed;
+  top: 86.5%;
+  left: 10%;
+  box-shadow: inset 0 -8px 30px 1px rgba(255, 255, 255, 0.9), inset 0 0px 25px 0 rgba(0, 0, 0, 0.4), inset 0 0 10px 1px rgba(255, 255, 255, 0.6);
+}
+
+.button:active {
+  box-shadow: inset 0 -8px 30px 1px rgba(255, 255, 255, 0.9), inset 0 8px 25px 0 rgba(0, 0, 0, 0.4), inset 0 0 10px 1px rgba(255, 255, 255, 0.6);
+}
+
+.button.home:active {
+  font-size: large;
+}
+
+
+
+@keyframes cardLoading {
+  0% {
+    width: 330px;
+    height: 330px;
+  }
+
+  60% {
+    width: 420px;
+    height: 620px;
+  }
+
+  100% {
+    width: 400px;
+    height: 600px;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
